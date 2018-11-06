@@ -55,6 +55,7 @@ container_image(
             ":group_tar",
             ":passwd",
             ":nsswitch.tar",
+            ":tmp.tar",
             ],
 )
 

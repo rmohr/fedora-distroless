@@ -9,6 +9,7 @@ Right now it includes:
  * ca-certificates
  * Root user entry
  * Basic nsswitch configuration
+ * An empty tmp folder
 
 ## How to use it
 
@@ -19,7 +20,7 @@ container_pull(
   name = "golang_base",
   registry = "docker.io",
   repository = "rmohr/fedora-distroless",
-  digest = "sha256:ce795c79e8f735487fe3f25c2717701b9ee6e595479f30ebe53b948138fe50c4",
+  digest = "sha256:13c2c937d0a0eef49243d307b3087333402056bf5da75c5baf01929687e11bef",
 )
 ```
 
