@@ -6,6 +6,7 @@ requirements for running golang applications.
 Right now it includes:
 
  * glibc
+ * ca-certificates
 
 ## How to use it
 
@@ -16,7 +17,7 @@ container_pull(
   name = "golang_base",
   registry = "docker.io",
   repository = "rmohr/fedora-distroless",
-  digest = "sha256:59b77524d9c7913914fdba5c1752a2387cf876afeca255786bb17f3e9b0df781",
+  digest = "sha256:ce795c79e8f735487fe3f25c2717701b9ee6e595479f30ebe53b948138fe50c4",
 )
 ```
 

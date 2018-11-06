@@ -50,7 +50,7 @@ pkg_tar(
 
 container_image(
     name = "fedora_distroless",
-    rpms = ["@glibc//file"],
+    rpms = ["@glibc//file", "@ca_certificates//file"],
     tars = [
             ":group_tar",
             ":passwd",
