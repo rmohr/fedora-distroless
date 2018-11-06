@@ -20,7 +20,7 @@ container_pull(
   name = "golang_base",
   registry = "docker.io",
   repository = "rmohr/fedora-distroless",
-  digest = "sha256:13c2c937d0a0eef49243d307b3087333402056bf5da75c5baf01929687e11bef",
+  digest = "sha256:ef94c65fcb3c9d328439aef271ba3dd20a3091fee241ada8818ecdcc2478e3c1",
 )
 ```
 

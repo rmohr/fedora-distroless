@@ -57,6 +57,9 @@ container_image(
             ":nsswitch.tar",
             ":tmp.tar",
             ],
+    env = {
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    },
 )
 
 go_image(
