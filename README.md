@@ -7,6 +7,8 @@ Right now it includes:
 
  * glibc
  * ca-certificates
+ * Root user entry
+ * Basic nsswitch configuration
 
 ## How to use it
 
