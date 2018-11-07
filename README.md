@@ -11,6 +11,34 @@ Right now it includes:
  * Basic nsswitch configuration
  * An empty tmp folder
 
+## Why
+
+This is inspired by
+[distroless](https://github.com/GoogleContainerTools/distroless).
+
+Using small containers but still using RPMs gives some key advantages for CI/CD:
+
+ * Smaller size means faster recovery while only using minimal network and
+   storage resources. This is exactly what is needed in the case that clusters
+   are already in trouble anyway.
+ * Small size means that pre-distributing the small images is fast and does not need
+   much disk space.
+ * Exclusively adding used runtime dependencies to the image reduces the attack
+   surface.
+ * Exclusively adding used runtime dependencies to the image reduces the need
+   to rebuild because of CVEs while at the same time allows faster and more
+   painless role-out of new versions, because of the small image size.
+ * Using maintained RPMs as source still makes updating easily in case of CVEs
+   which affect the runtime dependencies of the container.
+ * Easier to create reproducible builds, since updating to newer base images of
+   a whole OS typically adds and removes a lot of things in an intransparent way.
+
+There is only one disadvantage:
+
+ * Debugging is harder, since `docker exec` or `kubectl exec` will typically
+   not work. However it is possible to copy a statically compiled shell into
+   running containers.
+
 ## How to use it
 
 Reference the build in your WORKSPACE file:
